@@ -16,5 +16,4 @@ if [ "$(cat $PBS_NODEFILE)" == $echo "n121.cluster.iitmandi.ac.in" ]; then
 	python -c 'from mysqrt import sqrtNT; sqrtNT(2,debug=True)'
 else
 	echo "File did not go to n121.cluster.iitmandi.ac.in"
-	echo $(cat $PBS_NODEFILE)
 fi
