@@ -1,0 +1,7 @@
+import pdb
+pdb.set_trace() #This debugs the python code.
+
+PS1='$ '    #change left of bash to $ 
+
+make -f Makefile_name      #to run makefile with different name from Makefile
+make [target] -f Makefile_name    #to run target of makefile with different name other than Makefile
