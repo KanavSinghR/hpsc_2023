@@ -33,6 +33,7 @@ function sqrtNT(x)
 	enddo
 
 	if (i>=kmax) then 
-			print *, "Newton's method did not converge for %d values", kmax
+		print *, "Newton's method did not converge for %d values", kmax
+	endif
 	sqrtNT=s
 end function sqrtNT
