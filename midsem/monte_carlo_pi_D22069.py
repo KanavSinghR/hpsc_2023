@@ -20,13 +20,13 @@ def monte_carlo_pi(n):
 	return pi
 
 def test_main():
-	xvalues=[100, 200, 300, 10**6]
+	xvalues=[10**2, 10**3, 10**4, 10**5, 10**6]
 	for x in xvalues:
 		print("Testing with n=",x)
 		pi=monte_carlo_pi(x)
 		pi_numpy=np.pi
 		print("pi is: ", pi)
-		assert abs((pi-pi_numpy)/pi_numpy) > 0.2, "Your pi does not agree with numpy pi"
+		assert abs((pi-pi_numpy)/pi_numpy) < 0.2*np.pi, "Your pi does not agree with numpy pi"
 
 if __name__=='__main__':
 	test_main()
