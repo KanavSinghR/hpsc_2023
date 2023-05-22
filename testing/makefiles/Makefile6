@@ -1,0 +1,22 @@
+COMP = gfortran
+FLAG = -O3
+OBJECTS = main.o sub1.o sub2.o
+
+output.txt: main.exe
+	./main.exe > output.txt
+
+main.exe: ${OBJECTS}
+	${COMP} ${OBJECTS} -o main.exe
+	
+%.o: %.f90
+	${COMP} ${FLAG} -c $<
+	
+clean: ${OBJECTS}
+	rm ${OBJECTS}
+	
+clobber: 
+	rm main.exe
+	
+help:
+	@echo "main.exe: creates file from all .o files"
+	@echo "clean: Deletes all files of type .o"

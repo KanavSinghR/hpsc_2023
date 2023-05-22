@@ -1,0 +1,3 @@
+Using OpenMP with   2 threads
+ Max of x =    4.0000000000000000     
+ anyzero =  T
